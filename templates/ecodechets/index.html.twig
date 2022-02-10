@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{#{% block title %}Hello EcodechetsController!{% endblock %}#}
+
+{% block body %}
+    <section id="homepage">
+        <div class="inside main-grid">
+
+            {{ include('partials/_nav.html.twig') }}
+
+            <article id="article">
+
+                <div class="top-dash">
+                    <span>Mon tableau de bord</span>
+                    <form action="" class="search-form">
+                        <div class="input-container">
+                            <label for="search">Rechercher une page</label>
+                            <input id="search" type="text" placeholder="Rechercher une page">
+                        </div>
+                        <button></button>
+                    </form>
+                </div>
+
+                <div class="dash-content">
+                    <h1 class="title">Bienvenue sur l’intranet Eco-Déchets.</h1>
+                    <div class="dash-grid">
+                        <div class="dash-item">
+
+                            <a href="#" class="tile background">
+                                <span class="tile-icon target"></span>
+                                <h2 class="small-title white">Mon site d’exploitation</h2>
+                                <span class="tile-location">Vienne Métropole</span>
+                                <span class="tile-date">Depuis le 12/12/21</span>
+                            </a>
+
+                            <a href="#" class="tile">
+                                <span class="tile-icon flag"></span>
+                                <h2 class="small-title purple">lorem ipsum dolor</h2>
+                                <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            </a>
+
+                        </div>
+
+                        <div class="dash-item">
+
+                            <div class="notification-container">
+                                <span class="tile-icon bell has-notif"></span>
+                                <h2 class="small-title purple">Mes notifications</h2>
+                                <ul class="notif-list">
+                                    <li class="red-notif">
+                                        <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam.</p>
+                                        <a href="#" class="tile-cta">Call to action</a>
+                                    </li>
+                                    <li class="orange-notif">
+                                        <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam.</p>
+                                    </li>
+                                    <li class="orange-notif">
+                                        <p class="tile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam.</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            {{ include('partials/_aside.html.twig') }}
+
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,210 @@
+#aside {
+    height: 100%;
+    padding: 39px 35px 95px;
+    position: relative;
+
+    .avatar {
+        text-align: right;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #EDEDED;
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .avatar-image {
+            width: 65px;
+            height: 65px;
+            background: url('#{$medias_dir}avatar.png') no-repeat center;
+            background-size: cover;
+            margin-right: 16px;
+        }
+
+        .avatar-name {
+            font-size: 16px;
+            color: $base-color3;
+            letter-spacing: -0.2px;
+        }
+
+        .avatar-last {
+            font-size: 11px;
+            color: $base-color5;
+            letter-spacing: -0.22px;
+        }
+    }
+
+    .shortcuts {
+
+        .shortcuts-top {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+            span {
+                font-size: 15px;
+                color: $base-color3;
+                letter-spacing: -0.17px;
+            }
+
+            .sort {
+                display: block;
+                width: 20px;
+                height: 4.39px;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: url('#{$medias_dir}dots.svg') no-repeat center;
+                    background-size: cover;
+                }
+            }
+        }
+
+        .shortcuts-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+
+            .shortcuts-item {
+                margin-bottom: 12px;
+                width: 100%;
+                border-radius: 10px;
+                min-height: 80px;
+                box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.08);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                a {
+                    display: block;
+                    padding: 20px 18px 20px 82px;
+                    border-radius: 10px;
+                    text-decoration: none;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: $base-color3;
+                    letter-spacing: -0.19px;
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 18px;
+                        transform: translateY(-50%);
+                        width: 46px;
+                        height: 46px;
+                    }
+                }
+
+                &.new {
+
+                    a:before {
+                        background: url('#{$medias_dir}new.png') no-repeat center;
+                        background-size: cover;
+                    }
+                }
+
+                &.market {
+
+                    a:before {
+                        background: url('#{$medias_dir}market.png') no-repeat center;
+                        background-size: cover;
+                    }
+                }
+
+                &.missing {
+
+                    a:before {
+                        background: url('#{$medias_dir}missing.png') no-repeat center;
+                        background-size: cover;
+                    }
+                }
+
+                &.maintenance {
+
+                    a:before {
+                        background: url('#{$medias_dir}maintenance.png') no-repeat center;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    .historic{
+        margin-top: 40px;
+
+        .historic-head{
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .historic-list{
+
+            li{
+                color: $base-color3;
+                font-size: 13px;
+                letter-spacing: -0.2px;
+                line-height: 18px;
+                position: relative;
+                margin-bottom: 13px;
+                padding-left: 18px;
+
+                &:before{
+                    content: '';
+                    position: absolute;
+                    top: 7px;
+                    left: 0;
+                    background: #92AA8B;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                }
+
+                span{
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .logout {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 14px;
+        line-height: 16px;
+        color: $base-color3;
+        letter-spacing: -0.4px;
+        text-decoration: none;
+        padding-right: 30px;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 18.38px;
+            background: url('#{$medias_dir}icon-12.svg') no-repeat center;
+            background-size: cover;
+        }
+    }
+}

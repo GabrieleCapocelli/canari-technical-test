@@ -1,0 +1,183 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section id="employee">
+        <div class="inside main-grid">
+
+            {{ include('partials/_nav.html.twig') }}
+
+            <article id="article">
+
+                <div class="padding-left">
+
+                    <a href="#" class="back">Retour à la liste des employés</a>
+
+                    <section class="employee-desc">
+                        <div class="desc-grid">
+                            <div class="desc-item">
+                                <span>Fiche employé</span>
+                                <h1 class="title">Régis Guillermin</h1>
+                            </div>
+                            <div class="desc-item">
+                                <a href="#" class="btn update">Modifier la fiche</a>
+                                <a href="#" class="btn delete">Supprimer la fiche</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <section class=""></section>
+
+                <section class="error-messages padding-left">
+                    <ul class="error-list">
+                        <li>Le numéro de matricule de paie indiqué n’est pas valide.</li>
+                        <li>Le format de la pièce jointe du permis de conduire n’est pas valide.</li>
+                    </ul>
+                </section>
+
+                <section class="form-section">
+                    <span class="last">Dernière modification : 11/01/2021</span>
+
+                    <section class="form-grid">
+
+                        <div class="form-item">
+                            <ul class="form-list">
+                                <li class="check active"><a href="#">Informations personnelles</a></li>
+                                <li class="check"><a href="#">Données contractuelles</a></li>
+                                <li class="check"><a href="#">Permis de conduire</a></li>
+                                <li class="check"><a href="#">Santé</a></li>
+                                <li class="check"><a href="#">Formation habilitations</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="form-item">
+                            <form action="" class="employee-form">
+
+                                <div class="form-block">
+                                    <h2 class="block-title">informations du salarié</h2>
+
+                                    <div class="form-row error-overlay">
+                                        <label for="num-mat">Matricule de paie*</label>
+                                        <span class="more-text">Saisissez les premiers chiffres de votre région</span>
+                                        <div class="input-container">
+                                            <input id="num-mat" type="text" placeholder="" class="input">
+                                        </div>
+                                        <p class="input-error" style="display: block;">Le numéro indiqué n’est pas
+                                            valide.</p>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <label for="genre">Sexe*</label>
+                                        <div class="select-container">
+                                            <select name="genre" id="genre" class="select-picker">
+                                                <option value="">Homme</option>
+                                                <option value="">1</option>
+                                                <option value="">2</option>
+                                                <option value="">3</option>
+                                            </select>
+                                        </div>
+                                        <p class="input-error">Error</p>
+                                    </div>
+
+                                    <div class="form-row-grid">
+                                        <div class="form-row-item">
+                                            <label for="name">Matricule de paie*</label>
+                                            <div class="input-container">
+                                                <input id="name" type="text" placeholder="" class="input">
+                                            </div>
+                                            <p class="input-error">Error</p>
+                                        </div>
+                                        <div class="form-row-item">
+                                            <label for="firstname">Matricule de paie*</label>
+                                            <div class="input-container">
+                                                <input id="firstname" type="text" placeholder="" class="input">
+                                            </div>
+                                            <p class="input-error">Error</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row-grid">
+                                        <div class="form-row-item">
+                                            <label for="secu">Numéro de sécurité sociale*</label>
+                                            <div class="input-container">
+                                                <input id="secu" type="text" placeholder="" class="input">
+                                            </div>
+                                            <p class="input-error">Error</p>
+                                        </div>
+                                        <div class="form-row-item">
+                                            <label for="social">Régime de la sécurité sociale*</label>
+                                            <div class="select-container">
+                                                <select name="social" id="social" class="select-picker">
+                                                    <option value="">Lorem ipsum</option>
+                                                    <option value="">Lorem ipsuLorem ipsum</option>
+                                                    <option value="">Lorem ipsum</option>
+                                                    <option value="">Lorem ipsum</option>
+                                                </select>
+                                            </div>
+                                            <p class="input-error">Error</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="date-container">
+                                            <label for="bday">
+                                                <span>Date de naissance*</span>
+                                                <input id="bday" class="input" type="text" placeholder="12" maxlength="2" pattern="/\d{1,2}/" />
+                                                <input class="input" placeholder="12" maxlength="2" />
+                                                <input class="input year" placeholder="2000" maxlength="4"  />
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <label for="country">Nationalité*</label>
+                                        <div class="select-container">
+                                            <select name="country" id="country" class="select-picker">
+                                                <option value="">Homme</option>
+                                                <option value="">1</option>
+                                                <option value="">2</option>
+                                                <option value="">3</option>
+                                            </select>
+                                        </div>
+                                        <p class="input-error">Error</p>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="checkbox-container">
+                                            <label class="container">
+                                                Salarié étranger
+                                                <input type="checkbox" checked="checked">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="radio-container">
+                                            <span class="radio-top">Reconnaissance de travailleur handicapé</span>
+                                            <label class="container">Oui
+                                                <input type="radio" name="radio">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="container">Non
+                                                <input type="radio" name="radio">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </section>
+                </section>
+
+            </article>
+
+            {{ include('partials/_aside.html.twig') }}
+
+        </div>
+    </section>
+{% endblock %}
+

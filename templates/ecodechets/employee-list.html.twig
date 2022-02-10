@@ -1,0 +1,247 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section id="employee-list">
+
+        <div class="inside main-grid">
+
+            {{ include('partials/_nav.html.twig') }}
+
+            <article id="article">
+
+                <div class="more-padding">
+                    <span class="top-title">Gestion des employés</span>
+                    <h1 class="title">Liste des employés</h1>
+                    <div class="top-list">
+
+                        <form action="" class="search-form">
+                            <div class="input-container">
+                                <label for="search">Rechercher une page</label>
+                                <input id="search" type="text" placeholder="Rechercher une page">
+                            </div>
+                            <button></button>
+                        </form>
+
+                        <a href="#" class="cta transparent add"><span>Ajouter un employé</span></a>
+                    </div>
+                </div>
+
+                <section id="list">
+
+                    <span class="filter-icon">Filtrer ma recherche</span>
+                    <div class="resize">
+                        <form action="" class="filter-form">
+
+                            <div class="select-box">
+                                <label for="affectation">Affectation</label>
+                                <select id="affectation">
+                                    <option value="">Affectation</option>
+                                    <option value="">value 1</option>
+                                    <option value="">value 2</option>
+                                    <option value="">value 3</option>
+                                </select>
+                            </div>
+
+                            <div class="select-box">
+                                <label for="contract">Type de contrat</label>
+                                <select id="contract">
+                                    <option value="">Type de contrat</option>
+                                    <option value="">value 1</option>
+                                    <option value="">value 2</option>
+                                    <option value="">value 3</option>
+                                </select>
+                            </div>
+
+                            <div class="select-box">
+                                <label for="statut">Statut</label>
+                                <select id="statut">
+                                    <option value="">Statut</option>
+                                    <option value="">value 1</option>
+                                    <option value="">value 2</option>
+                                    <option value="">value 3</option>
+                                </select>
+                            </div>
+
+                            <div class="select-box">
+                                <label for="function">Fonction</label>
+                                <select id="function">
+                                    <option value="">Fonction</option>
+                                    <option value="">value 1</option>
+                                    <option value="">value 2</option>
+                                    <option value="">value 3</option>
+                                </select>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div class="filters-container">
+
+                        <ul class="filters-list">
+                            <li><a href="">CDI</a></li>
+                            <li><a href="">Vienne</a></li>
+                        </ul>
+
+                        <div class="result-nbr">
+                            <form action="" class="number-form">
+                                <label for="nbr">Nombre de lignes</label>
+                                <input id="nbr" type="number" name="number" value="10">
+                            </form>
+                        </div>
+
+                    </div>
+
+
+                    <table class="employee-table">
+
+                        <thead class="table-head round-layer">
+                        <tr>
+                            <th class="notif"></th>
+                            <th>ID</th>
+                            <th class="left">Nom</th>
+                            <th>Affectation</th>
+                            <th>Contrat</th>
+                            <th>Satut</th>
+                            <th>Fonction</th>
+                            <th class="btn-marge"></th>
+                            <th class="btn-in"></th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr class="table-row">
+                            <td class="notif has-notif"></td>
+                            <td>128</td>
+                            <td class="left">Stéphane Martin Durant</td>
+                            <td>Vienne</td>
+                            <td>CDI</td>
+                            <td>Technicien</td>
+                            <td>Gardin DI</td>
+                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
+                            <td class="btn-in"><a href="" class="progress">En cours</a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="notif"></td>
+                            <td>128</td>
+                            <td class="left">Stéphane Martin Durant</td>
+                            <td>Vienne</td>
+                            <td>CDI</td>
+                            <td>Technicien</td>
+                            <td>Gardin DI</td>
+                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
+                            <td class="btn-in"><a href="" class="update">Modifier</a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="notif has-notif"></td>
+                            <td>128</td>
+                            <td class="left">Stéphane Martin Durant</td>
+                            <td>Vienne</td>
+                            <td>CDI</td>
+                            <td>Technicien</td>
+                            <td>Gardin DI</td>
+                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
+                            <td class="btn-in"><a href="" class="progress">En cours</a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="notif"></td>
+                            <td>128</td>
+                            <td class="left">Stéphane Martin Durant</td>
+                            <td>Vienne</td>
+                            <td>CDI</td>
+                            <td>Technicien</td>
+                            <td>Gardin DI</td>
+                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
+                            <td class="btn-in"><a href="" class="update">Modifier</a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="notif has-notif"></td>
+                            <td>128</td>
+                            <td class="left">Stéphane Martin Durant</td>
+                            <td>Vienne</td>
+                            <td>CDI</td>
+                            <td>Technicien</td>
+                            <td>Gardin DI</td>
+                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
+                            <td class="btn-in"><a href="" class="progress">En cours</a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="notif"></td>
+                            <td>128</td>
+                            <td class="left">Stéphane Martin Durant</td>
+                            <td>Vienne</td>
+                            <td>CDI</td>
+                            <td>Technicien</td>
+                            <td>Gardin DI</td>
+                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
+                            <td class="btn-in"><a href="" class="update">Modifier</a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="notif has-notif"></td>
+                            <td>128</td>
+                            <td class="left">Stéphane Martin Durant</td>
+                            <td>Vienne</td>
+                            <td>CDI</td>
+                            <td>Technicien</td>
+                            <td>Gardin DI</td>
+                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
+                            <td class="btn-in"><a href="" class="progress">En cours</a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="notif"></td>
+                            <td>128</td>
+                            <td class="left">Stéphane Martin Durant</td>
+                            <td>Vienne</td>
+                            <td>CDI</td>
+                            <td>Technicien</td>
+                            <td>Gardin DI</td>
+                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
+                            <td class="btn-in"><a href="" class="update">Modifier</a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="notif has-notif"></td>
+                            <td>128</td>
+                            <td class="left">Stéphane Martin Durant</td>
+                            <td>Vienne</td>
+                            <td>CDI</td>
+                            <td>Technicien</td>
+                            <td>Gardin DI</td>
+                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
+                            <td class="btn-in"><a href="" class="progress">En cours</a></td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="notif"></td>
+                            <td>128</td>
+                            <td class="left">Stéphane Martin Durant</td>
+                            <td>Vienne</td>
+                            <td>CDI</td>
+                            <td>Technicien</td>
+                            <td>Gardin DI</td>
+                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
+                            <td class="btn-in"><a href="" class="update">Modifier</a></td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+
+                    <div class="pagination-container">
+                        <a href="#" class="back disable"></a>
+                        <ul class="pagination">
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                        <a href="#" class="next"></a>
+                    </div>
+
+                </section>
+
+            </article>
+
+            {{ include('partials/_aside.html.twig') }}
+
+        </div>
+    </section>
+{% endblock %}
+
+
+
