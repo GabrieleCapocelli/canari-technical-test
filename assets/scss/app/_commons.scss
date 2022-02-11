@@ -52,6 +52,29 @@ img {
             font-size: 16px;
             font-weight: 500;
             letter-spacing: -0.23px;
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 20px;
+                transform: translateY(-50%);
+                width: 12px;
+                height: 1px;
+                background: $base-color3;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 26px;
+                transform: translateY(-50%);
+                width: 1px;
+                height: 12px;
+                background: $base-color3;
+            }
         }
     }
 }
@@ -119,4 +142,108 @@ img {
     min-height: 100vh;
     height: 100%;
     background: rgba(109, 93, 169, .04);
+}
+
+.pagination-container {
+    width: 100%;
+    background: $base-color1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 33px 0 26px;
+    border-bottom-left-radius: 34px;
+    border-bottom-right-radius: 34px;
+
+    .pagination {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+
+        li {
+            font-size: 12px;
+            letter-spacing: 0;
+            line-height: 15px;
+            text-align: center;
+            margin: 0 8px;
+
+            &.current {
+                font-size: 14px;
+                letter-spacing: 0;
+                line-height: 17px;
+                font-weight: 500;
+
+                a {
+                    color: $base-color3;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: $base-color2;
+            }
+        }
+    }
+
+    .back,
+    .next {
+        position: relative;
+        width: 12px;
+        height: 12px;
+
+        &.disable{
+            pointer-events: none;
+
+            &:before,
+            &:after{
+                background: #DFDFDF;
+            }
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            width: 6px;
+            height: 1px;
+            background: $base-color2;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 4px;
+            width: 6px;
+            height: 1px;
+            background: $base-color2;
+        }
+    }
+
+    .back {
+
+        &:before {
+            left: 0;
+            transform: rotate(-45deg);
+        }
+
+        &:after {
+            left: 0;
+            transform: rotate(45deg);
+        }
+    }
+
+    .next {
+
+        &:before {
+            right: 0;
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            right: 0;
+            transform: rotate(-45deg);
+        }
+    }
 }
