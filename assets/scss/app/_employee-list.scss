@@ -198,7 +198,7 @@
             .result-nbr {
 
                 label {
-                    color: $base-color5;
+                    color: $base-color2;
                     font-size: 12px;
                     letter-spacing: -0.2px;
                     line-height: 15px;
@@ -211,7 +211,7 @@
                     border: 1px solid #C2C2C2;
                     border-radius: 5px;
                     background: transparent;
-                    color: $base-color5;
+                    color: $base-color2;
                     padding-left: 8px;
                 }
             }
@@ -219,7 +219,7 @@
 
         .employee-table {
             width: 100%;
-            box-shadow: 0 2px 30px 0 rgba(112,93,144,0.2);
+            box-shadow: 0 2px 30px 0 rgba(112, 93, 144, 0.2);
 
             .table-head {
                 background: $base-color3;
@@ -262,9 +262,9 @@
                     width: 40px;
                     position: relative;
 
-                    &.has-notif{
+                    &.has-notif {
 
-                        &:before{
+                        &:before {
                             content: "";
                             position: absolute;
                             right: 6px;
@@ -291,15 +291,15 @@
 
             .table-row {
 
-                &:nth-child(odd){
+                &:nth-child(odd) {
                     background: $base-color1;
                 }
 
-                &:nth-child(even){
+                &:nth-child(even) {
                     background: rgba(109, 93, 169, .06);
                 }
 
-                td{
+                td {
                     padding: 7px 5px;
                     color: $base-color3;
                     font-size: 13px;
@@ -307,7 +307,7 @@
                     line-height: 16px;
 
                     &.btn-in,
-                    &.btn-marge{
+                    &.btn-marge {
                         padding: 7px 0;
                     }
                 }
@@ -354,7 +354,7 @@
                     font-weight: 500;
                     position: relative;
 
-                    &:before{
+                    &:before {
                         content: "";
                         position: absolute;
                         top: 50%;
@@ -367,18 +367,6 @@
                     }
                 }
             }
-        }
-
-        .pagination-container{
-            width: 100%;
-            background: $base-color1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 33px 0 26px;
-            border-bottom-left-radius: 34px;
-            border-bottom-right-radius: 34px;
         }
     }
 }
