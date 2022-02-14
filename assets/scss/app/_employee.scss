@@ -100,6 +100,47 @@
                 background: $base-color11;
             }
         }
+
+        &.save {
+            border: solid 1px $base-color3;
+            padding: 11px 19px 11px 42px;
+            position: relative;
+            margin-right: 10px;
+
+            &.purple{
+                color: $base-color1;
+                background: $base-color3;
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 15px;
+                    transform: translateY(-50%);
+                    width: 17px;
+                    height: 17px;
+                    background: url('#{$medias_dir}save-white.png') no-repeat center;
+                    background-size: cover;
+                }
+            }
+
+            &.transparent{
+                color: $base-color3;
+                background: transparent;
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 15px;
+                    transform: translateY(-50%);
+                    width: 21.53px;
+                    height: 17px;
+                    background: url('#{$medias_dir}save-purple.png') no-repeat center;
+                    background-size: cover;
+                }
+            }
+        }
     }
 
     .employee-desc{
@@ -562,18 +603,33 @@
                 .files-container{
 
                     .file{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        align-items: center;
+                        display: grid;
+                        grid-template-columns: 150px 1fr;
+                        gap: 10px;
 
                         label{
                             margin: 0 30px 0 0;
                         }
 
-                        //input{
-                        //    appearance: none;
-                        //}
+                        input[type=file]{
+                            display: flex;
+                            flex-direction: row;
+                            color: $base-color9;
+                            cursor: pointer;
+                        }
+
+                        input[type=file]::-webkit-file-upload-button{
+                            position: relative;
+                            border: none;
+                            padding: 0;
+                            border-radius: 0;
+                            background: url('#{$medias_dir}file.png') no-repeat center;
+                            background-size: cover;
+                            width: 12.03px;
+                            height: 15px;
+                            color: transparent;
+                            cursor: pointer;
+                        }
                     }
                 }
 

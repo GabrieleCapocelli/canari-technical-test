@@ -5,6 +5,11 @@ body {
     color: $base-color2;
 }
 
+@-webkit-keyframes opacityAnimation {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 .inside {
     max-width: 1440px;
     width: 100%;

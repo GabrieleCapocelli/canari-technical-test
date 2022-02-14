@@ -5,11 +5,11 @@
     left: 0;
     width: 90px;
     height: 100%;
-    padding: 0 19px;
+    padding: 220px 19px 40px;
     background: $base-color1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     transition: width 250ms ease;
     overflow: hidden;
@@ -22,7 +22,19 @@
 
             .menu-item {
 
-                a {
+                &.has-submenu{
+
+                    .menu-link{
+
+                        &:after{
+                            opacity: 1;
+                            animation-name: opacityAnimation;
+                            animation-duration: 800ms;
+                        }
+                    }
+                }
+
+                .menu-link {
 
                     span {
                         opacity: 1;
@@ -43,8 +55,6 @@
         .menu-item {
             border-radius: 26px;
             width: 100%;
-            height: 52px;
-            //background: red;
             margin: 8px 0;
             position: relative;
             z-index: 1;
@@ -53,9 +63,68 @@
             letter-spacing: 0;
             line-height: 19px;
 
+            &.has-submenu{
+
+                &:hover{
+
+                    .menu-link{
+
+                        &:after{
+                            transform: rotate(0);
+                        }
+                    }
+                }
+
+                .menu-link{
+
+                    &:after{
+                        opacity: 0;
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: 20px;
+                        transform: translateY(-50%) rotate(-90deg);
+                        background: url('#{$medias_dir}arrow.svg') no-repeat center;
+                        background-size: cover;
+                        width: 11px;
+                        height: 6px;
+                        transition: all 500ms ease;
+                    }
+                }
+
+                .submenu{
+                    display: none;
+                    flex-direction: column;
+
+                    .submenu-item{
+                        font-size: 14px;
+                        letter-spacing: 0;
+                        line-height: 18px;
+
+                        a{
+                            padding: 7px 34px 7px 17px;
+                            display: block;
+                            color: $base-color3;
+                            text-decoration: none;
+
+                            &:hover{
+                                color: $base-color12;
+                                transition: color 500ms ease;
+                            }
+                        }
+                    }
+
+                    &.submenu-open{
+                        display: block;
+                        animation-name: opacityAnimation;
+                        animation-duration: 500ms;
+                    }
+                }
+            }
+
             &.dashboard {
 
-                a {
+                .menu-link {
 
                     &:before {
                         content: "";
@@ -72,7 +141,7 @@
 
                 &:hover {
 
-                    a {
+                    .menu-link {
 
                         &:before {
                             background: url('#{$medias_dir}menu-dash-hover.svg') no-repeat center;
@@ -88,15 +157,12 @@
                 }
 
                 &.active {
-                    background: $base-color8;
 
-                    a {
+                    .menu-link {
                         color: $base-color9;
+                        background: $base-color8;
 
                         &:before {
-                            //left: 16px;
-                            //width: 20px;
-                            //height: 20px;
                             background: url('#{$medias_dir}menu-dash-active.svg') no-repeat center;
                         }
 
@@ -110,7 +176,7 @@
 
             &.round {
 
-                a {
+                .menu-link {
 
                     &:before {
                         content: "";
@@ -127,7 +193,7 @@
 
                 &:hover {
 
-                    a {
+                    .menu-link {
 
                         &:before {
                             background: url('#{$medias_dir}menu-round-hover.svg') no-repeat center;
@@ -144,15 +210,12 @@
 
 
                 &.active {
-                    background: $base-color8;
 
-                    a {
+                    .menu-link {
                         color: $base-color9;
+                        background: $base-color8;
 
                         &:before {
-                            //left: 16px;
-                            //width: 15.83px;
-                            //height: 20px;
                             background: url('#{$medias_dir}menu-round-active.svg') no-repeat center;
                         }
 
@@ -166,7 +229,7 @@
 
             &.report {
 
-                a {
+                .menu-link {
 
                     &:before {
                         content: "";
@@ -183,7 +246,7 @@
 
                 &:hover {
 
-                    a {
+                    .menu-link {
 
                         &:before {
                             background: url('#{$medias_dir}menu-report-hover.svg') no-repeat center;
@@ -199,15 +262,12 @@
                 }
 
                 &.active {
-                    background: $base-color8;
 
-                    a {
+                    .menu-link {
                         color: $base-color9;
+                        background: $base-color8;
 
                         &:before {
-                            //left: 16px;
-                            //width: 20px;
-                            //height: 20px;
                             background: url('#{$medias_dir}menu-report-active.svg') no-repeat center;
                         }
 
@@ -221,7 +281,7 @@
 
             &.employee {
 
-                a {
+                .menu-link {
 
                     &:before {
                         content: "";
@@ -238,7 +298,7 @@
 
                 &:hover {
 
-                    a {
+                    .menu-link {
 
                         &:before {
                             background: url('#{$medias_dir}menu-employee-hover.svg') no-repeat center;
@@ -250,19 +310,15 @@
                             transition: color 250ms ease;
                         }
                     }
-
                 }
 
                 &.active {
-                    background: $base-color8;
 
-                    a {
+                    .menu-link {
                         color: $base-color9;
+                        background: $base-color8;
 
                         &:before {
-                            //left: 16px;
-                            //width: 20px;
-                            //height: 20px;
                             background: url('#{$medias_dir}menu-employee-active.svg') no-repeat center;
                         }
 
@@ -276,7 +332,7 @@
 
             &.fleet {
 
-                a {
+                .menu-link {
 
                     &:before {
                         content: "";
@@ -293,7 +349,7 @@
 
                 &:hover {
 
-                    a {
+                    .menu-link {
 
                         &:before {
                             background: url('#{$medias_dir}menu-fleet-hover.svg') no-repeat center;
@@ -309,15 +365,12 @@
                 }
 
                 &.active {
-                    background: $base-color8;
 
-                    a {
+                    .menu-link {
                         color: $base-color9;
+                        background: $base-color8;
 
                         &:before {
-                            //left: 16px;
-                            //width: 20px;
-                            //height: 20px;
                             background: url('#{$medias_dir}menu-fleet-active.svg') no-repeat center;
                         }
 
@@ -329,17 +382,19 @@
 
             }
 
-            a {
+            .menu-link {
                 position: relative;
                 z-index: 2;
                 width: 100%;
-                height: 100%;
+                height: 52px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: flex-start;
                 text-decoration: none;
                 color: $base-color3;
+                border-radius: 26px;
+                overflow: hidden;
 
                 span {
                     position: absolute;
