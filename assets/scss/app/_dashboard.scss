@@ -1,0 +1,34 @@
+.dashboard{
+    padding: 39px 57px 30px 150px;
+
+    .title {
+        margin-bottom: 48px;
+    }
+
+    .top-dash {
+        margin-bottom: 68px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        span {
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: -0.3px;
+            line-height: 19px;
+            color: $base-color3;
+        }
+
+        .search-form {
+            max-width: 450px;
+            width: 100%;
+        }
+    }
+
+    .dash-grid {
+        display: grid;
+        grid-template-columns: 367px 1fr;
+        gap: 46px;
+    }
+}

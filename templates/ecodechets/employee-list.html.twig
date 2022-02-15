@@ -7,14 +7,14 @@
 
             {{ include('partials/_nav.html.twig') }}
 
-            <article id="article">
+            <article id="article" class="list-view">
 
                 <div class="more-padding">
                     <span class="top-title">Gestion des employés</span>
                     <h1 class="title">Liste des employés</h1>
                     <div class="top-list">
 
-                        <form action="" class="search-form">
+                        <form action="" class="search">
                             <div class="input-container">
                                 <label for="search">Rechercher une page</label>
                                 <input id="search" type="text" placeholder="Rechercher une page">
@@ -22,7 +22,7 @@
                             <button></button>
                         </form>
 
-                        <a href="#" class="cta transparent add">Ajouter un employé</a>
+                        <a href="#" class="button basic gradient add">Ajouter un employé</a>
                     </div>
                 </div>
 
@@ -92,7 +92,7 @@
                     </div>
 
 
-                    <table class="employee-table">
+                    <table class="table">
 
                         <thead class="table-head round-layer">
                         <tr>
@@ -117,8 +117,8 @@
                             <td>CDI</td>
                             <td>Technicien</td>
                             <td>Gardin DI</td>
-                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
-                            <td class="btn-in"><a href="" class="progress">En cours</a></td>
+                            <td><a href="" class="button small green">Consulter</a></td>
+                            <td><a href="" class="button small transparent progress">En cours</a></td>
                         </tr>
                         <tr class="table-row">
                             <td class="notif"></td>
@@ -128,112 +128,21 @@
                             <td>CDI</td>
                             <td>Technicien</td>
                             <td>Gardin DI</td>
-                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
-                            <td class="btn-in"><a href="" class="update">Modifier</a></td>
-                        </tr>
-                        <tr class="table-row">
-                            <td class="notif has-notif"></td>
-                            <td>128</td>
-                            <td class="left">Stéphane Martin Durant</td>
-                            <td>Vienne</td>
-                            <td>CDI</td>
-                            <td>Technicien</td>
-                            <td>Gardin DI</td>
-                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
-                            <td class="btn-in"><a href="" class="progress">En cours</a></td>
-                        </tr>
-                        <tr class="table-row">
-                            <td class="notif"></td>
-                            <td>128</td>
-                            <td class="left">Stéphane Martin Durant</td>
-                            <td>Vienne</td>
-                            <td>CDI</td>
-                            <td>Technicien</td>
-                            <td>Gardin DI</td>
-                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
-                            <td class="btn-in"><a href="" class="update">Modifier</a></td>
-                        </tr>
-                        <tr class="table-row">
-                            <td class="notif has-notif"></td>
-                            <td>128</td>
-                            <td class="left">Stéphane Martin Durant</td>
-                            <td>Vienne</td>
-                            <td>CDI</td>
-                            <td>Technicien</td>
-                            <td>Gardin DI</td>
-                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
-                            <td class="btn-in"><a href="" class="progress">En cours</a></td>
-                        </tr>
-                        <tr class="table-row">
-                            <td class="notif"></td>
-                            <td>128</td>
-                            <td class="left">Stéphane Martin Durant</td>
-                            <td>Vienne</td>
-                            <td>CDI</td>
-                            <td>Technicien</td>
-                            <td>Gardin DI</td>
-                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
-                            <td class="btn-in"><a href="" class="update">Modifier</a></td>
-                        </tr>
-                        <tr class="table-row">
-                            <td class="notif has-notif"></td>
-                            <td>128</td>
-                            <td class="left">Stéphane Martin Durant</td>
-                            <td>Vienne</td>
-                            <td>CDI</td>
-                            <td>Technicien</td>
-                            <td>Gardin DI</td>
-                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
-                            <td class="btn-in"><a href="" class="progress">En cours</a></td>
-                        </tr>
-                        <tr class="table-row">
-                            <td class="notif"></td>
-                            <td>128</td>
-                            <td class="left">Stéphane Martin Durant</td>
-                            <td>Vienne</td>
-                            <td>CDI</td>
-                            <td>Technicien</td>
-                            <td>Gardin DI</td>
-                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
-                            <td class="btn-in"><a href="" class="update">Modifier</a></td>
-                        </tr>
-                        <tr class="table-row">
-                            <td class="notif has-notif"></td>
-                            <td>128</td>
-                            <td class="left">Stéphane Martin Durant</td>
-                            <td>Vienne</td>
-                            <td>CDI</td>
-                            <td>Technicien</td>
-                            <td>Gardin DI</td>
-                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
-                            <td class="btn-in"><a href="" class="progress">En cours</a></td>
-                        </tr>
-                        <tr class="table-row">
-                            <td class="notif"></td>
-                            <td>128</td>
-                            <td class="left">Stéphane Martin Durant</td>
-                            <td>Vienne</td>
-                            <td>CDI</td>
-                            <td>Technicien</td>
-                            <td>Gardin DI</td>
-                            <td class="btn-marge"><a href="" class="see">Consulter</a></td>
-                            <td class="btn-in"><a href="" class="update">Modifier</a></td>
+                            <td><a href="" class="button small green">Consulter</a></td>
+                            <td><a href="" class="button small purple">Modifier</a></td>
                         </tr>
                         </tbody>
 
                     </table>
 
-                    <div class="pagination-container">
-
+                    <div class="pagination">
                         <a href="#" class="back disable"></a>
-                        <ul class="pagination">
+                        <ul class="pagination-list">
                             <li class="current"><a href="#">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
                         </ul>
-
                         <a href="#" class="next"></a>
-
                     </div>
 
                 </section>

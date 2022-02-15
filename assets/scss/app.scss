@@ -3,8 +3,19 @@
 @import "app/_reset.scss";
 @import "app/_config.scss";
 @import "app/_commons.scss";
+
 @import "app/_navigation.scss";
 @import "app/_aside.scss";
-@import "app/_homepage.scss";
+
+//@import "app/_homepage.scss";
 @import "app/_employee-list.scss";
 @import "app/_employee.scss";
+
+@import "app/_buttons.scss";
+@import "app/_dashboard.scss";
+@import "app/_tiles.scss";
+@import "app/_titles.scss";
+@import "app/_notification-block.scss";
+@import "app/_search.scss";
+@import "app/_pagination.scss";
+@import "app/_table.scss";

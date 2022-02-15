@@ -1,0 +1,221 @@
+.button{
+
+    &.basic{
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 19px;
+        border-radius: 20px;
+        font-weight: 500;
+    }
+
+    &.medium{
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 19px;
+        font-weight: 500;
+    }
+
+    &.small{
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 16px;
+        border-radius: 16px;
+        text-decoration: none;
+        padding: 8px 20px;
+    }
+
+    &.transparent{
+        color: $base-color3;
+        background: $base-color1;
+        border: 1px solid $base-color3;
+    }
+
+    &.green{
+        color: $base-color3;
+        background-color: #DCECDD;
+        border: 1px solid #DCECDD;
+    }
+
+    &.purple{
+        color: $base-color1;
+        background: $base-color3;
+        border: 1px solid $base-color3;
+    }
+
+    &.red{
+        color: $base-color1;
+        background: $base-color11;
+        border: solid 1px $base-color11;
+    }
+
+    &.transparent-red{
+        color: $base-color11;
+        background: transparent;
+        border: solid 1px $base-color11;
+    }
+
+    &.gradient {
+        color: $base-color3;
+        background-image: linear-gradient(to right, #9283CC, #6D5DA9);
+        border: solid 1px transparent;
+        background-origin: border-box;
+        box-shadow: 2px 1000px 1px #fff inset;
+        padding: 11px 24px 10px 41px;
+    }
+
+    &.add {
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.23px;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 1px;
+            background: $base-color3;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 26px;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 12px;
+            background: $base-color3;
+        }
+    }
+
+    &.progress {
+        padding: 5px 5px 5px 16px;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 9px;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background: url('#{$medias_dir}pen.svg') no-repeat center;
+            background-size: cover;
+        }
+    }
+
+    &.update {
+        padding: 11px 19px 11px 42px;
+        position: relative;
+
+        &:before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 21px;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            background: url('#{$medias_dir}pen-white.svg') no-repeat center;
+            background-size: cover;
+        }
+    }
+
+    &.delete {
+        padding: 11px 19px 11px 42px;
+        position: relative;
+
+        &:before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 25px;
+            transform: translateY(-50%) rotate(45deg);
+            width: 1px;
+            height: 12px;
+            background: $base-color11;
+        }
+
+        &:after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 25px;
+            transform: translateY(-50%) rotate(-45deg);
+            width: 1px;
+            height: 12px;
+            background: $base-color11;
+        }
+    }
+
+    &.delete-red {
+        padding: 11px 19px 11px 42px;
+        position: relative;
+
+        &:before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 25px;
+            transform: translateY(-50%) rotate(45deg);
+            width: 1px;
+            height: 12px;
+            background: $base-color1;
+        }
+
+        &:after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 25px;
+            transform: translateY(-50%) rotate(-45deg);
+            width: 1px;
+            height: 12px;
+            background: $base-color1;
+        }
+    }
+
+    &.save {
+        padding: 11px 19px 11px 42px;
+        position: relative;
+
+        &:before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            width: 17px;
+            height: 17px;
+            background: url('#{$medias_dir}save-white.png') no-repeat center;
+            background-size: cover;
+        }
+    }
+
+    &.draft{
+        padding: 11px 19px 11px 42px;
+        position: relative;
+
+        &:before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            width: 21.53px;
+            height: 17px;
+            background: url('#{$medias_dir}save-purple.png') no-repeat center;
+            background-size: cover;
+        }
+    }
+}

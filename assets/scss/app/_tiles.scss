@@ -1,0 +1,116 @@
+.tile {
+    display: block;
+    text-decoration: none;
+    padding: 36px 49px 37px 35px;
+    border-radius: 10px;
+    box-shadow: 0 2px 30px 0 rgba(112, 93, 144, 0.2);
+    margin-bottom: 43px;
+    position: relative;
+
+    &.background {
+        background: linear-gradient(0deg, #494B68 0%, #60638F 100%);
+        min-height: 328px;
+        color: $base-color1;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 157px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            height: 140px;
+            background: url('#{$medias_dir}img-1.png') no-repeat center;
+            background-size: cover;
+        }
+    }
+
+    .small-title{
+        margin-bottom: 22px;
+    }
+
+    .tile-location {
+        display: block;
+        font-size: 26px;
+        letter-spacing: 0;
+        line-height: 32px;
+        margin-bottom: 5px;
+    }
+
+    .tile-date {
+        display: block;
+        font-size: 13px;
+        letter-spacing: 0;
+        line-height: 16px;
+    }
+
+    .tile-icon {
+        position: absolute;
+        top: 27px;
+        left: -19px;
+        height: 38px;
+        width: 38px;
+        border-radius: 50%;
+        background: $base-color1;
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
+
+        &.target {
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 19px;
+                height: 19px;
+                background: url('#{$medias_dir}icon-10.svg') no-repeat center;
+                background-size: cover;
+            }
+        }
+
+        &.flag {
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 19px;
+                width: 14.83px;
+                background: url('#{$medias_dir}icon-2.svg') no-repeat center;
+                background-size: cover;
+            }
+        }
+
+        &.bell {
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 19px;
+                width: 18.63px;
+                background: url('#{$medias_dir}icon-11.svg') no-repeat center;
+                background-size: cover;
+            }
+
+            &.has-notif {
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 9.5px;
+                    right: 8.5px;
+                    height: 9px;
+                    width: 9px;
+                    background: url('#{$medias_dir}notif.svg') no-repeat center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
