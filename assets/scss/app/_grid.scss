@@ -1,0 +1,10 @@
+.half-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 16px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 285px 1fr;
+}

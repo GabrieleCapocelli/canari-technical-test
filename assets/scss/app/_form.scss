@@ -1,0 +1,217 @@
+.form{
+
+    .form-block{
+        border-radius: 10px;
+        background: $base-color1;
+        box-shadow: 0 2px 30px 0 rgba(112,93,144,0.2);
+        padding: 34px 53px 43px 39px;
+
+        .block-title{
+            width: 100%;
+            color: $base-color12;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0;
+            line-height: 18px;
+            margin-bottom: 24px;
+            position: relative;
+            text-transform: uppercase;
+
+            &:before{
+                content: "";
+                position: absolute;
+                bottom: -6px;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: $base-color12;
+            }
+        }
+
+        .form-row{
+            margin-bottom: 18px;
+
+            &.margin-bottom{
+                margin-bottom: 30px;
+            }
+
+            .input{
+                width: calc(50% - 15px);
+            }
+
+            .select-container{
+                max-width: 200px;
+            }
+        }
+
+        .form-row-grid{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 15px;
+            margin-bottom: 18px;
+        }
+
+        .long-input{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 9px;
+        }
+
+        .additional-text{
+            display: block;
+            margin-bottom: 7.5px;
+            color: $base-color2;
+            font-size: 11px;
+            font-style: italic;
+            letter-spacing: -0.2px;
+            line-height: 14px;
+        }
+
+        .form-cta{
+            text-decoration: none;
+            font-family: "Roboto", Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 14px;
+            text-align: center;
+            border: 1px solid $base-color3;
+            position: relative;
+            border-radius: 14px;
+
+            &.add-form{
+                color: $base-color1;
+                background: $base-color3;
+                padding: 6.5px 16.5px 6.5px 30.5px;
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 15.5px;
+                    transform: translateY(-50%);
+                    width: 1px;
+                    height: 10px;
+                    background: $base-color1;
+                }
+
+                &:after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 15.5px;
+                    transform: translateY(-50%) rotate(90deg);
+                    width: 1px;
+                    height: 10px;
+                    background: $base-color1;
+                }
+
+            }
+
+            &.delete-form{
+                color: $base-color3;
+                background: transparent;
+                padding: 6.5px 36.5px 6.5px 16.5px;
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 20px;
+                    transform: translateY(-50%) rotate(45deg);
+                    width: 1px;
+                    height: 14px;
+                    background: $base-color3;
+                }
+
+                &:after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 20px;
+                    transform: translateY(-50%) rotate(-45deg);
+                    width: 1px;
+                    height: 14px;
+                    background: $base-color3;
+                }
+
+
+            }
+        }
+    }
+}
+
+.form-list{
+    background: $base-color3;
+    padding: 38px 0 38px 54px;
+    counter-reset: custom;
+
+    li{
+        font-size: 14px;
+        letter-spacing: -0.3px;
+        line-height: 18px;
+        counter-increment: custom-counter;
+        position: relative;
+        padding-left: 56px;
+        border-bottom: 1px solid rgba(255,255,255,.3);
+
+        &:before{
+            content: counter(custom-counter);
+            position: absolute;
+            color: $base-color1;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            --size: 46px;
+            line-height: var(--size);
+            width: var(--size);
+            height: var(--size);
+            background: transparent;
+            border: 1px solid $base-color1;
+            border-radius: 50%;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        &:last-child{
+            border: none;
+        }
+
+        &.active{
+
+            &:before{
+                color: $base-color3;
+                background: $base-color1;
+            }
+        }
+
+        &.check{
+
+            &:after{
+                content: "";
+                position: absolute;
+                top: calc(50% + 15px);
+                left: 32px;
+                transform: translateY(-50%);
+                width: 19px;
+                height: 19px;
+                background: url('#{$medias_dir}check.svg') no-repeat center;
+                background-size: cover;
+            }
+        }
+
+        a{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-decoration: none;
+            color: $base-color1;
+            width: 100%;
+            height: 100%;
+            padding: 20px 59px 20px 0;
+            min-height: 75px;
+        }
+    }
+}

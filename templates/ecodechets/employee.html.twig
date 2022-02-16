@@ -6,29 +6,29 @@
 
             {{ include('partials/_nav.html.twig') }}
 
-            <article id="article">
+            <article id="article" class="padding-stick-nav">
 
-                <div class="padding-left">
+                <div class="big-padding-left">
 
                     <a href="#" class="back">Retour à la liste des employés</a>
 
-                    <section class="employee-desc">
-                        <div class="desc-grid">
-                            <div class="desc-item">
-                                <span>Fiche employé</span>
+                    <section class="top-infos small-margin-bottom">
+
+                        <div class="half-grid">
+                            <div class="grid-item">
+                                <span class="top-title">Fiche employé</span>
                                 <h1 class="title">Régis Guillermin</h1>
                             </div>
-                            <div class="desc-item">
+                            <div class="grid-item flex-row-end-end">
                                 <a href="#" class="button medium purple update">Modifier la fiche</a>
-                                <a href="#" class="button medium transparent-red delete">Supprimer la fiche</a>
+                                <a href="#" class="button medium transparent-red delete small-margin-left">Supprimer la fiche</a>
                             </div>
                         </div>
+
                     </section>
                 </div>
 
-                <section class=""></section>
-
-                <section class="error-messages padding-left">
+                <section class="error-messages big-padding-left small-margin-bottom">
                     <ul class="error-list">
                         <li>Le numéro de matricule de paie indiqué n’est pas valide.</li>
                         <li>Le format de la pièce jointe du permis de conduire n’est pas valide.</li>
@@ -36,11 +36,13 @@
                 </section>
 
                 <section class="form-section">
-                    <span class="last">Dernière modification : 11/01/2021</span>
+
+
+                    <span class="last small-margin-bottom">Dernière modification : 11/01/2021</span>
 
                     <section class="form-grid">
 
-                        <div class="form-item">
+                        <div class="form-item padding-top">
                             <ul class="form-list">
                                 <li class="check active"><a href="#">Informations personnelles</a></li>
                                 <li class="check"><a href="#">Données contractuelles</a></li>
@@ -51,14 +53,14 @@
                         </div>
 
                         <div class="form-item">
-                            <form action="" class="employee-form">
+                            <form action="" class="form">
 
-                                <div class="form-block">
+                                <div class="form-block small-margin-bottom">
                                     <h2 class="block-title">informations du salarié</h2>
 
                                     <div class="form-row error-overlay">
                                         <label for="num-mat">Matricule de paie*</label>
-                                        <span class="more-text">Saisissez les premiers chiffres de votre région</span>
+                                        <span class="additional-text">Saisissez les premiers chiffres de votre région</span>
                                         <div class="input-container">
                                             <input id="num-mat" type="text" placeholder="" class="input">
                                         </div>
@@ -166,7 +168,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-row">
+                                    <div class="form-row margin-bottom">
                                         <label for="child">Informations enfants (prénom et date de naissance)</label>
                                         <div class="long-input">
                                             <input type="text" id="child" placeholder="Nicolas" class="input">
@@ -177,9 +179,9 @@
                                                     <input class="input year" placeholder="2000" maxlength="4"  />
                                                 </label>
                                             </div>
-                                            <a href="" class="small-cta transparent">Supprimer</a>
+                                            <a href="" class="form-cta transparent delete-form">Supprimer</a>
                                         </div>
-                                        <a href="" class="small-cta purple margin-btm">Ajouter un enfant</a>
+                                        <a href="" class="form-cta transparent add-form">Ajouter un enfant</a>
                                     </div>
 
                                     <div class="form-row">
@@ -203,14 +205,14 @@
 {#                                    </div>#}
                                 </div>
 
-                                <div class="form-ctas-container">
-                                    <a href="#" class="button medium purple update">Modifier la fiche</a>
+                                <div class="ctas-container">
+                                    <a href="#" class="button medium purple update small-margin-right">Modifier la fiche</a>
                                     <a href="#" class="button medium transparent-red delete">Supprimer la fiche</a>
                                 </div>
 
-                                <div class="form-ctas-container">
+                                <div class="ctas-container">
                                     <a href="#" class="button medium purple save">Enregistrer la fiche</a>
-                                    <a href="#" class="button medium transparent draft">Enregistrer la fiche</a>
+                                    <a href="#" class="button medium transparent draft small-margin-left small-margin-right">Enregistrer la fiche</a>
                                     <a href="#" class="button medium red delete-red">Supprimer la fiche</a>
                                 </div>
 
