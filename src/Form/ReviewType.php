@@ -14,8 +14,6 @@ class ReviewType extends AbstractType
         $builder
             ->add('title')
             ->add('content')
-            ->add('created_at')
-            ->add('updated_at')
             ->add('restaurant')
             ->add('user')
         ;

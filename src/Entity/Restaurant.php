@@ -6,6 +6,8 @@ use App\Repository\RestaurantRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Uid\Uuid;
+
 
 /**
  * @ORM\Entity(repositoryClass=RestaurantRepository::class)
@@ -15,7 +17,6 @@ class Restaurant
 {
     /**
      * @ORM\Id
-     * @ORM\GeneratedValue
      * @ORM\Column(type="string")
      */
     private $id;
@@ -32,10 +33,11 @@ class Restaurant
 
     public function __construct()
     {
+        $this->id = 'rest-'.Uuid::v1()->jsonSerialize();
         $this->reviews = new ArrayCollection();
     }
 
-    public function getId(): ?int
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -81,4 +83,5 @@ class Restaurant
 
         return $this;
     }
+
 }
