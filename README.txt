@@ -21,8 +21,9 @@ Given a Controller that provides to a twig file an array of reviews for a Restau
 
 
 4. PHP Error
-Given the following php error, please provide a solution:
+Given the following php errors, please provide a solution:
 
 "Object of class Restaurant could not be converted to string"
+"Object of class Review could not be converted to string"
 
 
